@@ -1,0 +1,8 @@
+package com.pedidosclientes.Controller;
+
+@RestController
+@RequestMapping("/api")
+public class Controller 
+{
+
+}

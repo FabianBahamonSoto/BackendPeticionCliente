@@ -1,0 +1,85 @@
+package com.pedidosclientes.DatoUsuario;
+
+import com.pedidosclientes.Cliente.Cliente;
+
+public class dataUser 
+{
+	private String nombreFactura;
+	private float precioFactura;
+	private int mesFactura;
+	private int diaFactura; 
+	private int horaFactura;
+	private int minutoFactura;
+	//
+	Cliente datos = new Cliente();
+	private static String[][] miArray = new String[100][6];
+	
+	// //
+		
+	public String[][] datosCliente(String[][] data)
+	{
+		miArray = data;
+		
+		for(int i=0; i<=(x.length -1); i++)
+		{
+			if(x[i][0] == null)
+			{
+				for(int n=0; n<=5; n++)
+				{
+					if(n==0)
+					{
+						x[i][n] = nombreFactura;
+					}
+					else if(n==1)
+					{
+						x[i][n] = Float.toString(precioFactura);
+					}
+					else if(n==2)
+					{
+						x[i][n] = Integer.toString(mesFactura);
+					}
+					else if(n==3)
+					{
+						x[i][n] = Integer.toString(diaFactura);
+					}
+					else if(n==4)
+					{
+						x[i][n] = Integer.toString(horaFactura);
+					}
+					else if(n==5)
+					{
+						x[i][n] = Integer.toString(minutoFactura);
+					}
+				}
+				break;
+			}
+		}
+		
+		return miArray;
+	}
+	
+	//   //
+	//GET
+	//public String[][] getAll()
+	//{
+		//String[] lista_de_clinetes = new String[listadoCliente.length];
+		//System.out.print(miArray[0][0]);
+		
+		//Se listan los clientes almacenados
+		/*for(int i=0; i<=(miArray.length - 1); i++)
+		{			
+			if(miArray[i][0] != null)
+			{
+				for(int n=0; n<=5; n++)
+				{
+					//String[] z = new String[1];
+					//miArray[i][n] = listadoCliente[i].toString();	
+					System.out.print(i + miArray[i][n]);
+				}
+			}
+		}*/
+		
+		//return miArray;
+	//}
+	
+}

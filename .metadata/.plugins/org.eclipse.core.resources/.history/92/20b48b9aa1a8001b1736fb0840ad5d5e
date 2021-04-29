@@ -1,0 +1,70 @@
+package com.pedidosclientes.DatoUsuario;
+
+import com.pedidosclientes.Cliente.Cliente;
+
+public class dataUser 
+{
+	private String nombreFactura;
+	private float precioFactura;
+	private int mesFactura;
+	private int diaFactura; 
+	private int horaFactura;
+	private int minutoFactura;
+	//
+	Cliente datos = new Cliente();
+	public String[][] miArray;
+	
+	// //
+		
+	public String[][] datosCliente(String[][] data)
+	{
+		miArray = data;
+		//System.out.println("Desde dataUser: " + miArray[0][0]);
+		
+		for(int i=0; i<=(miArray.length -1); i++)
+		{
+			if(miArray[i][0] != null)
+			{
+				for(int n=0; n<=5; n++)
+				{
+					//miArray[i] = nuevoCliente;
+					System.out.println("Desde dataUser: " + data[i][n]);
+				}
+			}
+		}
+		
+		//System.out.println("Desde dataUser: " + miArray);
+
+		return miArray;
+	}
+	
+	//   //
+	//GET
+	public String[][] getAll()
+	{
+		//String[] lista_de_clinetes = new String[listadoCliente.length];
+		
+		//Se listan los clientes almacenados
+		for(int i=0; i<=(miArray.length - 1); i++)
+		{
+			for(int n=0; n<=5; n++)
+			{
+				if(miArray[i][0] != null)
+				{
+					//String[] z = new String[1];
+					miArray[i] = listadoCliente[i].toString();	
+					System.out.print(i + miArray[i]);
+					break;
+				}
+				else if(listadoCliente[i] == null)
+				{
+					miArray[i] = "";
+					break;
+				}
+			}
+		}
+		
+		return miArray;
+	}
+	
+}

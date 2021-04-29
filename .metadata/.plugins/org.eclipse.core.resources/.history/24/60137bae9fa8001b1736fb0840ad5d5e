@@ -1,0 +1,40 @@
+package com.pedidosclientes.DatoUsuario;
+
+import com.pedidosclientes.Cliente.Cliente;
+
+public class dataUser 
+{
+	private String nombreFactura;
+	private float precioFactura;
+	private int mesFactura;
+	private int diaFactura; 
+	private int horaFactura;
+	private int minutoFactura;
+	//
+	Cliente datos = new Cliente();
+	String[][] miArray;
+	
+	// //
+	
+	public String[][] datosCliente(String[][] data)
+	{
+		miArray = data;
+		System.out.println("Desde dataUser: " + miArray.length);
+		
+		for(int i=0; i<=(miArray.length -1); i++)
+		{
+			if(miArray[i]==null)
+			{
+				for(int n=0; n<=(miArray.length -1); n++)
+				{
+					//miArray[i] = nuevoCliente;
+					System.out.println("Desde dataUser: " + miArray[i][n]);
+				}
+			}
+		}
+		
+		//System.out.println("Desde dataUser: " + miArray);
+
+		return miArray;
+	}
+}
